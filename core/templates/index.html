@@ -1,0 +1,199 @@
+{% load static %}
+
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NaveSpace</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'slick.css' %}">
+        <link rel="stylesheet" href="{% static './slick-theme.css' %}">
+    </head>
+    <body>
+        <div class="nav">
+            <div class="nav-esquerda">
+                <img src="{{home.logo.url}}" alt="" height='70px' width="70px">
+            </div>
+            <div class="nav-direita">
+                <a href="">Inicio</a>
+                <a href="">Quem somos</a>
+                <a href="">Produtos</a>
+                <a href="">Portifólio</a>
+                <a href="">Depoimentos</a>
+                <a href="">Contato</a>
+            </div>
+        </div>
+        <div class="nav2">
+            <div class="nav-esquerda">
+                <img src="{{home.logo.url}}" alt="" height='70px' width="70px">
+            </div>
+            <div class="nav-direita">
+                <a href="">Inicio</a>
+                <a href="">Quem somos</a>
+                <a href="">Produtos</a>
+                <a href="">Portifólio</a>
+                <a href="">Depoimentos</a>
+                <a href="">Contato</a>
+            </div>
+        </div>
+        <div class="faixa-inicio">
+            <h3>{{home.text_propaganda}}</h3>
+        </div>
+        <div class="inicio">
+            <div class="inicio-texto">
+                <img src="{{home.logo.url}}" alt=""height="250" width="250">
+                <h1>{{home.titulo}}</h1>
+                <button>{{home.text_button}}</button>
+            </div>
+        </div>
+        <div class="footer-inicio">
+            <h2>{{home.info1}}</h2>
+            <h2>{{home.info2}}</h2>
+            <h2>{{home.info3}}</h2>
+        </div>
+        <div class="quem-somos">
+        <div class="titulo-quem-somos">
+            <h2>{{quemsomos.titulo}}</h2>
+        </div>   
+        </div>
+        <div class="fundador">
+            <div class="fundador-info">
+                <img src="{{quemsomos.img_fundador.url}}" alt=""height="300" width="300">
+                <h3>{{quemsomos.text_fundador}}</h3>
+                <div class="linha"></div>
+                <h3>{{quemsomos.text_cargo}}</h3>
+                <div class="txt-fundador">
+                    <h3>{{quemsomos.historia}}</h3>
+                </div>
+            </div>
+            <div class="footer-sobre">
+                <h3>{{quemsomos.text_frase}}</h3>
+                <h3>{{quemsomos.text_autor}}</h3>
+            </div>
+        </div>
+        <div class="sessao-carrosel">
+            <div class="caixas"> 
+                {% for p in produtos %}
+                    <div class="caixa-padrao">
+                        <h1>{{p.titulo_produto}}</h1>
+                        <img src="{{p.img_produto.url}}" alt=""height="250" width="210">
+                        <button>{{p.text_button}}</button>
+                    </div>
+                {% endfor %}
+
+
+            </div>
+        </div>
+        <div class="custom">
+            <div class="titulo-custom">
+                <h2>{{propaganda.titulo}}</h2>
+            </div>
+            <div class="custom-imagem"> 
+            <div class="custom-texto">
+                <h1>propaganda.text1</h1>
+                <h2>propaganda.text2</h2>
+                <button>propaganda.text3</button>
+            </div>
+            </div>
+        </div>
+        <div class="depoimentos">
+        <div class="depoimento-cima">
+            <h1>Depoimentos</h1>
+        </div>
+        <div class="depoimentos-titulo">
+            
+            {% for t in depoimentos%}
+            <div class="depoimento1">
+                <img src="{{t.img_pessoa.url}}" alt=""height="250" width="250">
+                <div class="txt-depoimento01">
+                <h2>{{t.nome}}</h2>
+                <p>{{t.comentario}} </p>
+                </div>
+                </div>
+            {% endfor %}
+
+           <!-- <div class="depoimento1">
+            <img src="./img/beatriz.png" alt=""height="250" width="250">
+            <div class="txt-depoimento01">
+            <h2>Beatriz Lima</h2>
+            <p>Entrega muito rápida e produto de qualidade,
+                comprei minha camisa e ela chegou em 4 dias, o material é de muita bom além de ser muito confortável, primeira compra de muitas!</p>
+            </div>
+            </div>
+           <div class="depoimento2">
+            <img src="./img/maria-luiza.png" alt=""height="250" width="250">
+            <div class="txt-depoimento02">
+                <h2>Maria Luiza</h2>
+                <p>Comprei o abajur em formato de lua e estou simplesmente apaixonada. O atendimento é excelente, tanto pelo site quando presencial. Indico demais a NaveSpace, garanto que não irão se arrepender em comprar, eu mesmo não vejo a hora de comprar novamente</p>
+            </div>
+           </div> 
+           <div class="depoimento3">
+            <img src="./img/marte.png" alt=""height="250" width="250">
+            <div class="txt-depoimento3">
+            <h2>Jorge Rio</h2>
+            <p>Simplesmente amando esse globo de marte,
+                comprei esse globo de marte para servir de decoração no meu escritório e ele é simplesmente perfeito, cabe em qualquer lugar além de ter um material que facilita sua limpeza.</p>
+            </div> -->
+            </div>
+        </div>
+        </div>
+        <div class="contatos">
+            <h1>Contatos</h1>
+            <div class="sessao-contatos">
+                <div class="contatos-esquerda">
+                    <div class="mapa">
+                        <iframe src="{{contato.link}}" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <h3>Endereço</h3>
+                        <div class="dados">
+                            <div class="local">
+                                <img src="{% static 'img/local.png' %}" alt="" height="40" width="40">
+                                <h3>{{contato.endereco}}</h3>
+                            </div>
+                            <div class="local">
+                                <img src="{% static './img/email.png' %}" alt=""height="30" width="40">
+                                <h3>{{contato.email}}</h3>
+                            </div>
+                            <div class="local">
+                                <img src="{% static 'img/telefone.png' %}" alt=""height="35" width="30">
+                                <h3>{{contato.telefone}} </h3>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+                <div class="contatos-direita">
+                    <div class="contatenos">
+                        <form class="forms">
+                            <input type="text" id="fname" name="fname" placeholder="Seu nome"><br><br>
+                            <input type="text" id="lname" name="lname" placeholder="Seu email"><br><br>    
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <button type="submit">Enviar</button>                   
+                        </form>
+                    <div class="icons">
+                        <img src="{% static 'img/facebook.png' %}" alt="">
+                        <img src="{% static 'img/instagram.png' %}" alt="">
+                        <img src="{% static 'img/linkedin.png' %}" alt="">
+                        <img src="{% static 'img/twitter.png' %}" alt="">
+                        <img src="{% static 'img/whatsapp.png' %}" alt="">
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <h2>NaveSpace  |  Desenvolvido pela EJECT</h2>
+           </div>
+        <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+        <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+        <script type="text/javascript" src="{% static 'jquery-1.11.1.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'jquery-migrate-1.2.1.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'slick.js' %}"></script>
+        <script type="text/javascript" src="{% static 'slick.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'carrosel.js' %}"></script>
+    </body>    
+    </html>
